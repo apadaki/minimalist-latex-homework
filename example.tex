@@ -1,0 +1,64 @@
+\newcommand{\classpath}{homework}
+\documentclass{\classpath}
+
+\usepackage{hyperref}
+
+\begin{document}
+
+\title{An Elegant Proof}
+\class{math1023}
+\author{John Smith}
+\date{July 31, 2020}
+
+\maketitle
+
+\problem{31}{4} Prove the following theorem:
+\begin{theorem} 
+    \(2^{1/n}\) is irrational for all integers \(n \geq 3\).
+\end{theorem}
+
+\textit{Hint:} 
+First recall \textbf{Fermat's Last Theorem.} 
+Then, set up a proof by contradiction and prove the original theorem.
+
+\alphnum 
+    We recall the following theorem.
+
+    \begin{theorem}\label{fermat}
+        (Fermat) The equation \(x^n + y^n = z^n\) has no integer solutions for \(x,y,z \neq 0\) and \(n > 2\).
+    \end{theorem}
+        
+    (The proof is trivial and left as an exercise to the reader)
+
+\alphnum
+    \begin{lemma}\label{lem}
+        Suppose \(2^{1/n}\) is rational for some integer \(n \geq 3\). 
+        Then \(\exists a, b \in \mathbb{Z}^{\neq 0}\) for which \(b^n + b^n = a^n\).
+    \end{lemma}
+    \begin{proof}
+        Let \(2^{1/n}\) be rational for some integer \(n \geq 3\).
+
+        Then, there exist nonzero integers \(a\) and \(b\) such that 
+        \begin{align*}
+            \frac{a}{b} = 2^{1/n}.
+        \end{align*}
+        And so
+        \begin{align*}
+            a^n = 2b^n = b^n + b^n.
+        \end{align*}
+        This completes the proof.
+    \end{proof}
+
+\alphnum
+    We will now prove the original statement.
+
+    \begin{proof}
+        Let a counterexample to the original theorem exist. Then, by our lemma in (b), 
+        there exist nonzero integers \(a\) and \(b\) where \(b^n + b^n = a^n\).
+        However, this equation presents a solution to the equation in part (a) which has no solutions.
+        Hence, we conclude that no counterexamples to the theorem exist, and therefore, the theorem is true. 
+    \end{proof}
+
+{\tiny /s}
+
+\end{document}
