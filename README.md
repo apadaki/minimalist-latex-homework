@@ -12,4 +12,7 @@ To denote an alphabetical question part, simply use the command `\alphpart`. The
 
 For more information about these commands are displayed, reference [example.tex](example.tex) and [example.pdf](example.pdf).
 
+## Installation
+Simply copy the [homework.cls](homework.cls) file to a desired directory, and import it as shown in the example.
+
     
