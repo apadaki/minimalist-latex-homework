@@ -82,10 +82,10 @@
     \fontsize{9}{10}
     \fontfamily{lmr}
     \ifthenelse{\NOT \value{alphCount}=1}
-    {\textbf{\\*(\alph{alphCount})}}
+    {\textbf{\\*(\alph{alphCount}) }}
     {
       \begin{center}
-        \noindent\makebox[\linewidth]{\rule{14cm}{0.5pt}}
+      \noindent\makebox[\linewidth]{\rule{14cm}{0.5pt}}
       \end{center}
       \textbf{(\alph{alphCount})}
     }

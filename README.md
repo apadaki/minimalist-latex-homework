@@ -10,6 +10,6 @@ To denote a problem, use the command `\problem{}{}`. Entering the first argument
 
 To denote an alphabetical question part, simply use the command `\alphpart`. The counter for (a), (b), (c), etc. is automatically updated, and is reset whenever a `\problem` command is used.
 
-For more information about these commands are displayed, reference [example.tex](example.tex) and [example.pdf](example.pdf).
+For more information about how these commands are displayed, reference [example.tex](example.tex) and [example.pdf](example.pdf).
 
     
