@@ -4,6 +4,9 @@
 A minimalist LaTeX class for homework assignments, providing capabilities for basic theorem environments and alphabetical question parts.
 
 ## Usage
+
+**Note:** This template is extremely minimalist and the formatting doesn't look amazing or anything. There exist better LaTeX homework templates out there.
+
 This LaTeX document class assumes a problem-part hierarchy in the homework assignment.
 
 To denote a problem, use the command `\problem{}{}`. Entering the first argument is mandatory and entering the second argument is optional. For example, the command `\problem{7}{2}` will be rendered as **Problem 7.2.** whereas the command `\problem{7}{}` will be rendered as **Problem 7.**
