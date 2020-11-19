@@ -19,9 +19,9 @@
 \newtheoremstyle{clean}
     {\topsep}
     {\topsep}
-    {\fontfamily{lmr}}
+    {\fontfamily{qpl}}
     {0pt}
-    {\normalsize\fontfamily{lmr}\bfseries}
+    {\normalsize\fontfamily{qpl}\bfseries}
     {.}
     {5pt plus 1pt minus 1pt}
     {}
@@ -36,9 +36,24 @@
 \newtheorem{conjecture}[theorem]{Conjecture}
 \newtheorem*{example}{Example}
 
-% Question Part Counter
+% Set Abbreviations (add whatever is convenient)
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+
+% More useful things
+
+% Question Part Counters
 \newcounter{alphCount}
 \setcounter{alphCount}{1}
+
+\newcounter{romanCount}
+\setcounter{romanCount}{1}
+
+\newcounter{RomanCount}
+\setcounter{RomanCount}{1}
 
 % Title Format
 \def\class#1{\gdef\@class{#1}}
@@ -46,15 +61,15 @@
   \newpage
   \null
   \let \footnote \thanks
-    {\center \huge \fontfamily{lmr}\bfseries{\@title} \par}%
+    {\center \huge \fontfamily{qpl}\bfseries{\@title} \par}%
     \vskip 2.5em%
-    {\large \fontfamily{lmr} \textbf{\@class}}%
-    {\center\large\fontfamily{lmr}\textup{\@author}}
+    {\large \fontfamily{qpl} \textbf{\@class}}%
+    {\center\large\fontfamily{qpl}\textup{\@author}}
     \hfill
     {\large
       \lineskip .5em%
       \begin{tabular}[t]{c}%hi
-        \large\fontfamily{lmr}\textsl{\@date}
+        \large\fontfamily{qpl}\textsl{\@date}
       \end{tabular}\par}%
   \par
   \vskip 1.5em}
@@ -63,33 +78,54 @@
 \renewcommand{\section}{
     \@startsection
     {section}{1}{0pt}{-1.5ex plus -1ex minus -.2ex}{1.0ex plus .2ex}
-    {\fontsize{10}{10}\fontfamily{lmr}\bfseries}
+    {\fontsize{10}{10}\fontfamily{qpl}\bfseries}
 }
 
 
 \newcommand{\problem}[2]{
     \setcounter{alphCount}{1}
+    \setcounter{romanCount}{1}
+    \setcounter{RomanCount}{1}
     \begin{center}
         \noindent\makebox[\linewidth]{\rule{15.5cm}{0.8pt}}
     \end{center}
     \ifthenelse{\equal{#2}{}}
-    {\section{Problem #1.}}
-    {\section{Problem #1.#2.}} 
+    {\section{P#1.}}
+    {\section{P#1.#2.}} 
 }
  
-% Question Part Format
+% Question Part Formats
 \newcommand{\alphnum}[0]{
     \fontsize{9}{10}
-    \fontfamily{lmr}
+    \fontfamily{qpl}
     \ifthenelse{\NOT \value{alphCount}=1}
     {\textbf{\\*(\alph{alphCount}) }}
     {
-      \begin{center}
-      \noindent\makebox[\linewidth]{\rule{14cm}{0.5pt}}
-      \end{center}
       \textbf{(\alph{alphCount})}
     }
     \stepcounter{alphCount}
+}
+
+\newcommand{\romnum}[0]{
+    \fontsize{9}{10}
+    \fontfamily{qpl}
+    \ifthenelse{\NOT \value{romanCount}=1}
+    {\textbf{\\*(\roman{romanCount}) }}
+    {
+      \textbf{(\roman{romanCount})}
+    }
+    \stepcounter{romanCount}
+}
+
+\newcommand{\Romnum}[0]{
+    \fontsize{9}{10}
+    \fontfamily{qpl}
+    \ifthenelse{\NOT \value{RomanCount}=1}
+    {\textbf{\\*(\Roman{RomanCount}) }}
+    {
+      \textbf{(\Roman{RomanCount})}
+    }
+    \stepcounter{RomanCount}
 }
 
 % Better QED Symbol
