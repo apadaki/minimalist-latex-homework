@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{homework}[7/31/2020 Homework Template for Latex]
+\ProvidesClass{homework}[10/02/2021 Homework Template for Latex]
 \LoadClass{article}
 
 % Essential Math Packages
@@ -44,6 +44,18 @@
 \newcommand{\C}{\mathbb{C}}
 
 % More useful things
+\newcommand{\re}{\text{Re}}
+\newcommand{\im}{\text{Im}}
+\newcommand{\angled}[1]{\langle #1 \rangle}
+\newcommand{\pd}[2]{\dfrac{\partial #1}{\partial #2}}
+\newcommand{\pdd}[2]{\dfrac{\partial^2 #1}{\partial #2^2}}
+\newcommand{\cp}[1]{\overline{#1}}
+\newcommand{\lt}[1] {
+  \fontsize{9}{10}
+  \fontfamily{qpl}
+  \noindent\textbf{(#1)}
+}
+
 
 % Question Part Counters
 \newcounter{alphCount}
